@@ -27,10 +27,7 @@ export class Clock extends React.Component<Props, State> {
     }, 1000);
   }
 
-  componentDidUpdate(
-    prevProps: Readonly<Props>,
-    prevState: Readonly<State>,
-  ): void {
+  componentDidUpdate(prevProps: Readonly<Props>): void {
     const nameChanged = this.props.name !== prevProps.name;
 
     if (nameChanged) {
